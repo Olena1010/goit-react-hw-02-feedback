@@ -8,7 +8,9 @@ class App extends Component {
     bad: 0,
   };
 
+  countTotalFeedback = () => {
+    return Object.values(this.state).reduce((total, val) => total + val, 0)
+  };
 
-
-
+  
 };
