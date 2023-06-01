@@ -8,24 +8,36 @@ export const Option = styled.div`
 `;
 
 export const Button = styled.button`
-  padding: 12px 10px;
+  display: block;
   width: 162px;
-  text-transform: capitalize;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 22px;
+  font-weight: 700;
+  display: inline-block;
+  outline: 0;
+  border: 0;
   cursor: pointer;
-  border: none;
-  letter-spacing: 1.2px;
-  font-size: 25px;
-  font-family: Helvetica Neue;
-  color: rgb(35, 75, 83);
-  background-color:  #d9bc9a;
-  background-image: linear-gradient(
-    180deg,
-     30%,
-    transparent 70%
-  );
-  background-repeat: no-repeat;
-  background-size: 100% 200%;
-  border-radius: 30px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
-  transition: all 0.5s ease;
+  will-change: box-shadow, transform;
+  background: radial-gradient(100% 100% at 100% 0%, #d9bc9a 0%, #d9bc9a 100%);
+  box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%),
+    0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%),
+    inset 0px -0.01em 0px rgb(58 65 111 / 50%);
+  padding: 0 2em;
+  border-radius: 15px;
+  color: #fff;
+  height: 2.6em;
+  text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+
+  &:hover {
+    box-shadow: 0px 0.1em 0.2em rgb(45 35 66 / 40%),
+      0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0px -0.1em 0px #d9bc9a;
+    transform: translateY(-0.1em);
+  }
+
+  &:active {
+    box-shadow: inset 0px 0.1em 0.6em #d9bc9a;
+    transform: translateY(0em);
+  }
 `;
